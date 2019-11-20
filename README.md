@@ -36,13 +36,13 @@ Set global variable to custom specific feature:
 
     let g:preview_image_filetypes = 'png,apng,jpg,jpeg,webp,ico,bmp,gif,svg'
 
-| variable                     | description                                 | default                                                            |
-|------------------------------|---------------------------------------------|--------------------------------------------------------------------|
-| `g:preview_open_browser`     | Command to open browser with generated html | Mac: 'open', Linux: 'xdg-open', win32: 'start cmd /c start chrome' |
-| `g:preview_image_filetypes`  | Filetypes to preview with `<img>`           | 'png,apng,jpg,jpeg,webp,ico,bmp,gif,svg'                           |
-| `g:preview_video_filetypes`  | Filetypes to preview with `<video>`         | 'mp4,webm,ogg'                                                     |
-| `g:preview_audio_filetypes`  | Filetypes to preview with `<audio>`         | 'mp3,wav'                                                          |
-| `g:preview_object_filetypes` | Filetypes to preview with `<object>`        | 'pdf,swf'                                                          |
+| variable                     | description                                 | default                                                                  |
+|------------------------------|---------------------------------------------|--------------------------------------------------------------------------|
+| `g:preview_open_browser`     | Command to open browser with generated html | Mac: 'open',<br>Linux: 'xdg-open',<br>win32: 'start cmd /c start chrome' |
+| `g:preview_image_filetypes`  | Filetypes to preview with `<img>`           | 'png,apng,jpg,jpeg,webp,ico,bmp,gif,svg'                                 |
+| `g:preview_video_filetypes`  | Filetypes to preview with `<video>`         | 'mp4,webm,ogg'                                                           |
+| `g:preview_audio_filetypes`  | Filetypes to preview with `<audio>`         | 'mp3,wav'                                                                |
+| `g:preview_object_filetypes` | Filetypes to preview with `<object>`        | 'pdf,swf'                                                                |
 
 ## Development
 
@@ -52,3 +52,7 @@ The preview page is `public/index.html` based on React. Run
     npm start
 
 Then open `public/index.html`. You can look at `src/index.js`, `public/index.html` and `public/index.css` first.
+
+[2]: https://github.com/VundleVim/Vundle.vim
+[5]: https://github.com/tpope/vim-pathogen
+[7]: https://github.com/junegunn/vim-plug
