@@ -54,13 +54,13 @@ let s:open_browser = exists("g:preview_open_browser")
       \ : s:GetDefaultOpenBrowserCommand()
 let s:image_filetypes = exists("g:preview_image_filetypes") 
       \ ? g:preview_image_filetypes
-      \ : 'png,jpg,jpeg,webp,ico'
+      \ : 'png,apng,jpg,jpeg,webp,ico,bmp,gif,svg'
 let s:video_filetypes = exists("g:preview_video_filetypes") 
       \ ? g:preview_video_filetypes
-      \ : 'mp4,webm'
+      \ : 'mp4,webm,ogg'
 let s:audio_filetypes = exists("g:preview_audio_filetypes") 
       \ ? g:preview_audio_filetypes
-      \ : 'mp3'
+      \ : 'mp3,wav'
 let s:object_filetypes = exists("g:preview_object_filetypes") 
       \ ? g:preview_object_filetypes
       \ : 'pdf,swf'
