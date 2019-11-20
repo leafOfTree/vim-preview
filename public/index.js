@@ -51,10 +51,10 @@ var Medias = function (_React$Component) {
         if (_this2.isMatchType(imageTypes, a.type) && !_this2.isMatchType(imageTypes, b.type)) {
           return -1;
         }
-        if (a.size === '0B') {
+        if (!a.size) {
           return 1;
         }
-        if (b.size === '0B') {
+        if (!b.size) {
           return -1;
         }
       });
@@ -88,9 +88,11 @@ var Medias = function (_React$Component) {
       } else if (size > 1000) {
         // KB
         result = size / 1000 + 'K';
-      } else {
+      } else if (size > 0) {
         // B
         result = size + 'B';
+      } else {
+        result = '';
       }
       return result.replace(/\.\d*/, '');
     }
@@ -143,7 +145,7 @@ var Medias = function (_React$Component) {
           '\uD83D\uDDC3'
         );
       }
-      if (file.size === '0B') {
+      if (!file.size) {
         content = React.createElement(
           'div',
           null,

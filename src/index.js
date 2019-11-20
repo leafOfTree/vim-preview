@@ -26,10 +26,10 @@ class Medias extends React.Component {
       if (this.isMatchType(imageTypes, a.type) && !this.isMatchType(imageTypes, b.type)) {
         return -1;
       }
-      if (a.size === '0B') {
+      if (!a.size) {
         return 1;
       }
-      if (b.size === '0B') {
+      if (!b.size) {
         return -1;
       }
     });
@@ -63,9 +63,11 @@ class Medias extends React.Component {
     } else if (size > 1000) {
       // KB
       result = size / 1000 + 'K';
-    } else {
+    } else if (size > 0) {
       // B
       result = size + 'B';
+    } else {
+      result = '';
     }
     return result.replace(/\.\d*/, '');
   }
@@ -118,7 +120,7 @@ class Medias extends React.Component {
         <div>🗃</div>
       )
     }
-    if (file.size === '0B') {
+    if (!file.size) {
       content = (
         <div>📁</div>
       )
