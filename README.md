@@ -1,6 +1,30 @@
 # Vim-preview
 
-Open browser to preview files in current directory from vim.
+## Installation
+
+<details>
+<summary><a>How to install</a></summary>
+
+- [VundleVim][2]
+
+        Plugin 'leafOfTree/vim-preview'
+
+- [vim-pathogen][5]
+
+        cd ~/.vim/bundle && \
+        git clone https://github.com/leafOfTree/vim-preview --depth 1
+
+- [vim-plug][7]
+
+        Plug 'leafOfTree/vim-preview'
+        :PlugInstall
+
+- Or manually, clone this plugin to `path/to/this_plugin`, and add it to `rtp` in vimrc
+
+        set rtp+=path/to/this_plugin
+
+<br />
+</details>
 
 ## Usage
 
@@ -15,10 +39,10 @@ Set global variable to `1` to enable or `0` to disable. Ex:
 | variable                     | description                                 | default                 |
 |------------------------------|---------------------------------------------|-------------------------|
 | `g:preview_open_browser`     | Command to open browser with generated html | 'open'                  |
-| `g:preview_image_filetypes`  | Image filetypes to preview                  | 'png,jpg,jpeg,webp,ico' |
-| `g:preview_video_filetypes`  | Video filetypes to preview                  | 'mp4,webm'              |
-| `g:preview_audio_filetypes`  | Audio filetypes to preview                  | 'mp3'                   |
-| `g:preview_object_filetypes` | Object filetypes to preview                 | 'pdf,swf'               |
+| `g:preview_image_filetypes`  | Filetypes to preview with `<img>`           | 'png,jpg,jpeg,webp,ico' |
+| `g:preview_video_filetypes`  | Filetypes to preview with `<video>`         | 'mp4,webm'              |
+| `g:preview_audio_filetypes`  | Filetypes to preview with `<audio>`         | 'mp3'                   |
+| `g:preview_object_filetypes` | Filetypes to preview with `<object>`        | 'pdf,swf'               |
 
 ## Development
 
