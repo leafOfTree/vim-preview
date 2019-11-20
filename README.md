@@ -32,17 +32,17 @@ Open any `.png` or `.jpg` file and press <kbd>p</kbd>. Or open any file and pres
 
 ## Configuration
 
-Set global variable to `1` to enable or `0` to disable. Ex:
+Set global variable to custom specific feature:
 
-    let g:vim_svelte_plugin_load_full_syntax = 1
+    let g:preview_image_filetypes = 'png,apng,jpg,jpeg,webp,ico,bmp,gif,svg'
 
-| variable                     | description                                 | default                 |
-|------------------------------|---------------------------------------------|-------------------------|
-| `g:preview_open_browser`     | Command to open browser with generated html | 'open'                  |
-| `g:preview_image_filetypes`  | Filetypes to preview with `<img>`           | 'png,jpg,jpeg,webp,ico' |
-| `g:preview_video_filetypes`  | Filetypes to preview with `<video>`         | 'mp4,webm'              |
-| `g:preview_audio_filetypes`  | Filetypes to preview with `<audio>`         | 'mp3'                   |
-| `g:preview_object_filetypes` | Filetypes to preview with `<object>`        | 'pdf,swf'               |
+| variable                     | description                                 | default                                                            |
+|------------------------------|---------------------------------------------|--------------------------------------------------------------------|
+| `g:preview_open_browser`     | Command to open browser with generated html | Mac: 'open', Linux: 'xdg-open', win32: 'start cmd /c start chrome' |
+| `g:preview_image_filetypes`  | Filetypes to preview with `<img>`           | 'png,apng,jpg,jpeg,webp,ico,bmp,gif,svg'                           |
+| `g:preview_video_filetypes`  | Filetypes to preview with `<video>`         | 'mp4,webm,ogg'                                                     |
+| `g:preview_audio_filetypes`  | Filetypes to preview with `<audio>`         | 'mp3,wav'                                                          |
+| `g:preview_object_filetypes` | Filetypes to preview with `<object>`        | 'pdf,swf'                                                          |
 
 ## Development
 
