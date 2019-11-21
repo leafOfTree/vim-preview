@@ -15,6 +15,7 @@ code {
 .container {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .container .item {
@@ -43,15 +44,16 @@ code {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.container .item .content {
-  display: flex;
-  font-size: 22px;
-}
 
 .container .item .info .extra {
   margin-left: 30px;
   opacity: 1;
   font-size: 12px;
+}
+
+.container .item .content {
+  display: flex;
+  font-size: 22px;
 }
 
 .container .item img {
