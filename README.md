@@ -1,5 +1,7 @@
 # Vim-preview
 
+Open browser to preview files in current directory from vim
+
 ## Installation
 
 <details>
@@ -28,7 +30,7 @@
 
 ## Usage
 
-Open any `.png` or `.jpg` file and press <kbd>p</kbd>. Or open any file and press <kbd>;p</kbd>.
+Open any file in vim and press <kbd>;p</kbd>.
 
 ## Configuration
 
@@ -46,7 +48,7 @@ Set global variable to custom specific feature:
 
 ## Development
 
-The preview page is `public/index.html` based on React. Run
+The preview page is `./public/index.html` that is based on React. Run
 
     npm install 
     npm start
