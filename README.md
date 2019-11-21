@@ -1,5 +1,9 @@
 # Vim-preview
 
+<p align="center">
+<img alt="screenshot" src="https://raw.githubusercontent.com/leafOfTree/leafOfTree.github.io/master/vim-preview-screenshot.png" width="200" />
+</p>
+
 Open browser to preview files in current directory from vim
 
 ## Installation
