@@ -6,7 +6,8 @@ const {
   imageTypes,
   videoTypes,
   audioTypes,
-  objectTypes
+  objectTypes,
+  path
 } = config;
 const packageTypes = 'gz,zip,tar,iso,dmg';
 
@@ -16,6 +17,7 @@ class Medias extends React.Component {
     this.state = {
       files: []
     };
+    document.title = path;
   }
 
   componentDidMount() {
@@ -162,6 +164,8 @@ class Medias extends React.Component {
   render() {
     const files = this.state.files;
     return React.createElement("div", {
+      className: "page"
+    }, React.createElement("div", null, path), React.createElement("div", {
       className: "container"
     }, files.map(file => {
       const {
@@ -181,7 +185,7 @@ class Medias extends React.Component {
       }, dimensions ? size + ', ' + dimensions[0] + 'x' + dimensions[1] : size)), React.createElement("div", {
         className: "content"
       }, this.getFileContent(file)));
-    }));
+    })));
   }
 
 }

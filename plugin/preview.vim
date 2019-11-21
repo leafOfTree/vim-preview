@@ -8,6 +8,7 @@ function! Preview()
   let files = glob(path.'/*', 0, 1)
   let fileInfo = ['window.files = ['] + map(files, function('s:GetFileInfo')) + ['];']
   let configInfo = ['window.config = {'] 
+        \ + ['path: "'.path.'",']
         \ + ['imageTypes: "'.s:image_filetypes.'",'] 
         \ + ['videoTypes: "'.s:video_filetypes.'",'] 
         \ + ['audioTypes: "'.s:audio_filetypes.'",'] 

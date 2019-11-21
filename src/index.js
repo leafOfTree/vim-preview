@@ -1,5 +1,5 @@
 const { files, config } = window;
-const { imageTypes, videoTypes, audioTypes, objectTypes } = config;
+const { imageTypes, videoTypes, audioTypes, objectTypes, path } = config;
 const packageTypes = 'gz,zip,tar,iso,dmg';
 
 class Medias extends React.Component {
@@ -8,7 +8,9 @@ class Medias extends React.Component {
     this.state = {
       files: [],
     }
+    document.title = path;
   }
+
   componentDidMount() {
     const files = this.props.files.map(file => {
       const fullpath = file.path;
@@ -153,27 +155,30 @@ class Medias extends React.Component {
     const files = this.state.files;
 
     return (
-      <div className="container">
-        {files.map((file) => {
-          const { fullpath, name, size, dimensions } = file;
-          return (
-            <a 
-              className="item" 
-              key={name} 
-              href={fullpath}
-              >
-              <div className="info">
-                <span>{name}</span>
-                <span className="extra">
-                  {dimensions ? (size +  ', ' + dimensions[0] + 'x' + dimensions[1]) : size}
-                </span>
-              </div>
-              <div className="content">
-                {this.getFileContent(file)}
-              </div>
-            </a>
-          );
-        })}
+      <div className="page">
+        <div>{path}</div>
+        <div className="container">
+          {files.map((file) => {
+            const { fullpath, name, size, dimensions } = file;
+            return (
+              <a 
+                className="item" 
+                key={name} 
+                href={fullpath}
+                >
+                <div className="info">
+                  <span>{name}</span>
+                  <span className="extra">
+                    {dimensions ? (size +  ', ' + dimensions[0] + 'x' + dimensions[1]) : size}
+                  </span>
+                </div>
+                <div className="content">
+                  {this.getFileContent(file)}
+                </div>
+              </a>
+            );
+          })}
+        </div>
       </div>
     );
   }
