@@ -96,7 +96,7 @@ class Medias extends React.Component {
     let content;
     if (this.isMatchType(imageTypes, file.type)) {
       content = (
-        <img src={file.fullpath} alt={file.name} />
+        <img src={file.fullpath} alt={file.name} style={{ backgroundColor: 'grey' }} />
       );
     }  
     if (this.isMatchType(videoTypes, file.type)) {

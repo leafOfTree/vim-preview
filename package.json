@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel --watch src --out-dir ./public"
+    "start": "babel --watch src --out-dir ./public",
+    "build": "babel src --out-dir ./public"
   },
   "keywords": [],
   "author": "",

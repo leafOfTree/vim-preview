@@ -106,7 +106,10 @@ class Medias extends React.Component {
     if (this.isMatchType(imageTypes, file.type)) {
       content = React.createElement("img", {
         src: file.fullpath,
-        alt: file.name
+        alt: file.name,
+        style: {
+          backgroundColor: 'grey'
+        }
       });
     }
 
