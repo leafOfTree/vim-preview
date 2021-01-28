@@ -34,7 +34,7 @@ Open browser to preview files in current directory from vim.
 
 ## Usage
 
-Open any file in vim and press <kbd>;p</kbd>.
+Open any file in vim and press <kbd>,p</kbd>.
 
 ## Configuration
 

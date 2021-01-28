@@ -73,5 +73,5 @@ let autocmd_filetypes = join(
       \   function('s:GetAutocmdFiletype')), 
       \ ',')
 
-nnoremap ;p :call Preview()<cr>
+nnoremap ,p :call Preview()<cr>
 execute 'autocmd BufRead '.autocmd_filetypes.' nnoremap <buffer> p :call Preview()<cr>'
