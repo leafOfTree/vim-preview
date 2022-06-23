@@ -1,7 +1,7 @@
 # Vim-preview
 
 <p align="center">
-<img alt="screenshot" src="https://raw.githubusercontent.com/leafOfTree/leafOfTree.github.io/master/vim-preview-screenshot.png" width="300" />
+<img alt="screenshot" src="https://raw.githubusercontent.com/leafOfTree/leafOfTree.github.io/master/vim-preview-screenshot.png" width="400" />
 </p>
 
 Open browser to preview files in current directory from vim.
@@ -34,7 +34,7 @@ Open browser to preview files in current directory from vim.
 
 ## Usage
 
-Open any file in vim and press <kbd>,p</kbd>.
+Open any file in vim and call `:Preview`.
 
 ## Configuration
 
