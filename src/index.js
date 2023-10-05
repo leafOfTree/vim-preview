@@ -128,7 +128,7 @@ class Medias extends React.Component {
       )
     } else if (!file.type) {
       content = (
-        <div>⚙</div>
+        <div>⚙️</div>
       )
     }
 

@@ -144,7 +144,7 @@ class Medias extends React.Component {
     if (!file.size) {
       content = React.createElement("div", null, "\uD83D\uDCC1");
     } else if (!file.type) {
-      content = React.createElement("div", null, "\u2699");
+      content = React.createElement("div", null, "\u2699\uFE0F");
     }
 
     if (!content) {
