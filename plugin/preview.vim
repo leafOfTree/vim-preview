@@ -67,11 +67,5 @@ let s:object_filetypes = exists("g:preview_object_filetypes")
       \ : 'pdf,swf'
 
 let s:plugin_path = expand('<sfile>:p:h')
-let autocmd_filetypes = join(
-      \ map(
-      \   split(s:image_filetypes, ','), 
-      \   function('s:GetAutocmdFiletype')), 
-      \ ',')
 
-execute 'autocmd BufRead '.autocmd_filetypes.' nnoremap <buffer> p :call Preview()<cr>'
 command Preview call Preview()

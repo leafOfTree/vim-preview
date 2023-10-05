@@ -23,19 +23,19 @@ code {
   padding: 10px;
   margin-bottom: 20px;
   box-sizing: border-box;
-  box-shadow: 0 0 4px 0;
   margin: 1.5%;
   background: white;
   transition: transform 0.2s;
 }
 
-/* .container .item:hover {
-  transform: scale(1.2);
-} */
+.container .item:hover {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.3)
+}
 
 .container .item .info {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 10px;
 }
