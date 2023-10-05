@@ -38,7 +38,7 @@ Open any file in vim and call `:Preview`.
 
 ## Configuration
 
-Set global variable to custom specific feature:
+Set global variable to customize specific feature:
 
     let g:preview_image_filetypes = 'png,apng,jpg,jpeg,webp,ico,bmp,gif,svg'
 
@@ -52,12 +52,12 @@ Set global variable to custom specific feature:
 
 ## Development
 
-The preview page is `./public/index.html` that is based on React. Run
+The preview page at `./public/index.html` that is based on React. Run
 
     npm install 
     npm start
 
-Then open `public/index.html`. You can look at `src/index.js`, `public/index.html` and `public/index.css` first.
+Then call `:Preview` . You can check `src/index.js`, `src/index.css` and `public/index.html` first.
 
 [2]: https://github.com/VundleVim/Vundle.vim
 [5]: https://github.com/tpope/vim-pathogen
