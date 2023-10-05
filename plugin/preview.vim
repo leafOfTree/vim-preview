@@ -4,7 +4,18 @@
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! Preview()
-  let path = expand('%:p:h')
+  if &filetype == 'fern'
+    let saved_register = @*
+    call fern#action#call('yank')
+    let path = @*
+    let @* = saved_register
+  else
+    let path = substitute(expand('%:p:h'), '.*file://', '', '')
+  endif
+  if !isdirectory(path)
+    let path = substitute(path, '/[^/]*$', '', '')
+  endif
+
   let files = glob(path.'/*', 0, 1)
   let fileInfo = ['window.files = ['] + map(files, function('s:GetFileInfo')) + ['];']
   let configInfo = ['window.config = {'] 

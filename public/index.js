@@ -107,9 +107,7 @@ class Medias extends React.Component {
       content = React.createElement("img", {
         src: file.fullpath,
         alt: file.name,
-        style: {
-          backgroundColor: 'grey'
-        }
+        style: {}
       });
     }
 
@@ -132,7 +130,10 @@ class Medias extends React.Component {
     if (this.isMatchType(objectTypes, file.type)) {
       content = React.createElement("object", {
         data: file.fullpath,
-        type: 'application/' + file.type
+        type: 'application/' + file.type,
+        style: {
+          height: '600px'
+        }
       });
     }
 
@@ -168,7 +169,9 @@ class Medias extends React.Component {
     const files = this.state.files;
     return React.createElement("div", {
       className: "page"
-    }, React.createElement("div", null, path), React.createElement("div", {
+    }, React.createElement("div", {
+      className: "title"
+    }, path), React.createElement("div", {
       className: "container"
     }, files.map(file => {
       const {

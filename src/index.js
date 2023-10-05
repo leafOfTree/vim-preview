@@ -96,7 +96,7 @@ class Medias extends React.Component {
     let content;
     if (this.isMatchType(imageTypes, file.type)) {
       content = (
-        <img src={file.fullpath} alt={file.name} style={{ backgroundColor: 'grey' }} />
+        <img src={file.fullpath} alt={file.name} style={{}} />
       );
     }  
     if (this.isMatchType(videoTypes, file.type)) {
@@ -113,7 +113,7 @@ class Medias extends React.Component {
     }
     if (this.isMatchType(objectTypes, file.type)) {
       content = (
-        <object data={file.fullpath} type={'application/' + file.type}>
+        <object data={file.fullpath} type={'application/' + file.type} style={{ height: '600px' }}>
         </object>
       );
     }
@@ -156,7 +156,7 @@ class Medias extends React.Component {
 
     return (
       <div className="page">
-        <div>{path}</div>
+        <div className="title">{path}</div>
         <div className="container">
           {files.map((file) => {
             const { fullpath, name, size, dimensions } = file;
